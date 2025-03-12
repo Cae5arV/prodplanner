@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODUCTION PLANNER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CONFIGURATION AND SETTINGS</h1>
+
+    <!-- Start Date Picker -->
+    <div class="control-container">
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" value="2025-01-01">
+        <button onclick="updateCalendar()">Update Calendar</button>
+    </div>
+
+    <!-- Buttons for Adding Tables, Chairs, and Canceling Actions -->
+    <div class="control-container">
+        <button onclick="TItable()">TI table</button>
+        <button onclick="TIchair()">TI chair</button>
+        <button onclick="TIart()">TI art</button>
+        <button onclick="TIcashpo()">TI cashpo</button>
+        <button onclick="Stable()">S table</button>
+        <button onclick="Schair()">S chair</button>
+        <button onclick="Scoffee()">S coffee</button>
+        <button onclick="Ssmell()">S smell</button>
+        <button onclick="Svase()">S vase</button>
+        <button onclick="Smodule()">S module</button>
+        <button onclick="Dtable()">D table</button>
+        <button onclick="Dchair()">D chair</button>
+        <button onclick="Dvine()">D vine</button>
+        <button onclick="Dcoffee()">D coffee</button>
+        <button onclick="Dart()">D art</button>
+        <button onclick="ZGtable()">ZG table</button>
+        <button onclick="ZGchair()">ZG chair</button>
+        <button onclick="ZGlong()">ZG long</button>
+        <button onclick="ZGart()">ZG art</button>
+        <button onclick="ZGcoffee()">ZG coffee</button>
+        <button onclick="STtable()">ST table</button>
+        <button onclick="STchair()">ST chair</button>
+        <button onclick="STcoffee()">ST coffee</button>
+        <button onclick="STart()">ST art</button>
+        <button onclick="STbig()">ST big</button>
+        <button onclick="STcarpet()">ST carpet</button>
+        <button onclick="Downtime()">Downtime</button>
+        <button onclick="cancelLastAction()">Cancel Last Action</button>
+    </div>
+
+    <!-- Text Input for Adding Text to Hour Squares -->
+    <div class="control-container">
+        <input type="text" id="hourText" placeholder="Enter text for hour">
+        <button onclick="addTextToSelectedHours()">Add Text to Selected Hours</button>
+    </div>
+
+    <!-- Calendar Title -->
+    <h1>PRODUCTION PLANNER 2025</h1>
+
+    <!-- Calendar Container -->
+    <div id="calendar"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+body {
+    font-family: Helvetica;
+    margin: 20px;
+}
+
+/* Add margin to the container of buttons and inputs */
+.control-container {
+    margin-bottom: 10px; /* Increase space below each control container */
+}
+
+/* Add margin to individual buttons and inputs */
+button, input[type="date"], input[type="text"] {
+    margin: 5px; /* Add space around buttons and inputs */
+}
+
+/* Add margin to the calendar title */
+h1 {
+    margin-top: 20px; /* Increase space above the calendar title */
+    margin-bottom: 10px; /* Increase space below the calendar title */
+}
+
+.collection {
+    margin-bottom: 20px;
+}
+
+.item {
+    margin: 10px 0;
+}
+
+.all-days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 колонок для дней недели */
+    gap: 10px; /* Пробел между днями */
+}
+
+.day {
+    border: 2px solid #000000;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование текста */
+}
+
+table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+}
+
+tr {
+    height: 20px; /* Установите высоту строки на 20px */
+}
+
+.hour {
+    border: 1px solid #ddd;
+    box-sizing: border-box; /* Учитываем границы в высоте */
+    width: 16%; /* Ширина ячейки для часов */
+    height: 100%; /* Высота ячейки равна высоте строки */
+    text-align: center; /* Центрирование текста в ячейках */
+}
+
+/* COLORRING */
+.hour[data-item-type="TI table"].filled {
+    background-color: #000000; /* Blue */
+}
+
+.hour[data-item-type="TI chair"].filled {
+    background-color: #383838; /* Red */
+}
+
+.hour[data-item-type="TI art"].filled {
+    background-color: #838383; 
+}
+
+.hour[data-item-type="TI cashpo"].filled {
+    background-color: #d4d4d4; 
+}
+
+.hour[data-item-type="S table"].filled {
+    background-color: #02007e; 
+}
+
+.hour[data-item-type="S chair"].filled {
+    background-color: #001fac; 
+}
+
+.hour[data-item-type="S coffee"].filled {
+    background-color: #0011f8; 
+}
+
+.hour[data-item-type="S smell"].filled {
+    background-color: #007afd; 
+}
+
+.hour[data-item-type="S vase"].filled {
+    background-color: #72b6ff; 
+}
+
+.hour[data-item-type="S module"].filled {
+    background-color: #9acbff; 
+}
+
+.hour[data-item-type="D table"].filled {
+    background-color: #3d003d; 
+}
+
+.hour[data-item-type="D chair"].filled {
+    background-color: #810070; 
+}
+
+.hour[data-item-type="D vine"].filled {
+    background-color: #ff00ea; 
+}
+
+.hour[data-item-type="D coffee"].filled {
+    background-color: #ff76e1; 
+}
+
+.hour[data-item-type="D art"].filled {
+    background-color: #ff96ed; 
+}
+
+.hour[data-item-type="ZG table"].filled {
+    background-color: #642800; 
+}
+
+.hour[data-item-type="ZG chair"].filled {
+    background-color: #af5500; 
+}
+
+.hour[data-item-type="ZG long"].filled {
+    background-color: #fa7000; 
+}
+
+.hour[data-item-type="ZG art"].filled {
+    background-color: #ffad69; 
+}
+
+.hour[data-item-type="ZG coffee"].filled {
+    background-color: #faca94; 
+}
+
+.hour[data-item-type="ST table"].filled {
+    background-color: #003b1b; 
+}
+
+.hour[data-item-type="ST chair"].filled {
+    background-color: #009940; 
+}
+
+.hour[data-item-type="ST coffee"].filled {
+    background-color: #04ff75; 
+}
+
+.hour[data-item-type="ST art"].filled {
+    background-color: #85ffc2; 
+}
+
+.hour[data-item-type="ST big"].filled {
+    background-color: #00aaaa; 
+}
+
+.hour[data-item-type="ST carpet"].filled {
+    background-color: #7afcf1; 
+}
+
+.hour[data-item-type="Downtime"].filled {
+    background-color: #ff0000; 
+}
+
+
+/* Style for selected hour squares */
+.hour.selected {
+    border: 2px solid #000; /* Highlight selected hours with a border */
+}
+
+/* Style for hour squares with text */
+.hour {
+    position: relative; /* Ensure text is positioned correctly */
+}
+
+.hour::after {
+    content: attr(data-text); /* Display the text inside the hour square */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px; /* Adjust font size as needed */
+    color: #000; /* Text color */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
