@@ -655,6 +655,35 @@ function ZGcoffee() {
     coloredHoursHistory.push({ type: 'ZG coffee', coloredHours });
 }
 
+function ZGmirror() {
+    const days = document.querySelectorAll('.day');
+    let hoursToColor = 10; // Number of hours to color for Table
+    const coloredHours = []; // Track the hours colored in this action
+
+    while (hoursToColor > 0 && currentDayIndex < days.length) {
+        const day = days[currentDayIndex];
+        const hours = day.querySelectorAll('.hour');
+
+        while (hoursToColor > 0 && currentHourIndex < hours.length) {
+            const hour = hours[currentHourIndex];
+            hour.classList.add('filled');
+            hour.dataset.itemType = 'ZG mirror'; // Mark this hour as a table
+            coloredHours.push({ dayIndex: currentDayIndex, hourIndex: currentHourIndex });
+            currentHourIndex++;
+            hoursToColor--;
+        }
+
+        if (currentHourIndex >= hours.length) {
+            currentDayIndex++;
+            currentHourIndex = 0;
+        }
+    }
+
+    // Save this action in history
+    coloredHoursHistory.push({ type: 'ZG mirror', coloredHours });
+}
+
+
 function STtable() {
     const days = document.querySelectorAll('.day');
     let hoursToColor = 10; // Number of hours to color for Table
