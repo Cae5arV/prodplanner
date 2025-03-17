@@ -140,6 +140,10 @@ tr {
     background-color: #faca94; 
 }
 
+.hour[data-item-type="ZG mirror"].filled {
+    background-color: #fde3c4; 
+}
+
 .hour[data-item-type="ST table"].filled {
     background-color: #003b1b; 
 }
